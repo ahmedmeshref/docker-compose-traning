@@ -1,8 +1,11 @@
 version: '3.7'
 services:
-  web:
-    image: nginx:alpine
+  web_app:
+    image: nginx 
     ports:
-      - "8000:80"
+      -  8000:80
+    
+    # render the index file from the src into the html file inside of nginx 
     volumes:
-      - ./:/usr/share/nginx/html
+      - ./src:/usr/share/nginx/html
+    
